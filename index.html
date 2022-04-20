@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .circle {
+            background-color: black;
+            margin: 30px;
+            height: 400px;
+            border-radius: 50%;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            width: 400px;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            box-shadow: 12px 1px 5px #ffd900;
+            transition: all 5s;
+        }
+        .circle:hover{
+            background-color: #ffd900;
+            box-shadow: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="circle"></div>
+</body>
+
+</html>
