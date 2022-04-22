@@ -14,7 +14,7 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
-  background-color: #030302;
+  background-color: #000000;
 }
 
 body {
@@ -22,17 +22,35 @@ body {
   justify-content: center;
   align-items: center;
 }
-
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(#f0f, #f00);
+}
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(rgb(0, 247, 255), rgb(0, 81, 255));
+  clip-path: circle(50% at 10% 10%);
+}
 .wrapper {
   display: grid;
   grid-template-columns: repeat(9, 40px);
   grid-template-rows: repeat(7, 40px);
   grid-gap: 1.5rem;
+  z-index: 2;
 }
-
 .item {
-  background-color: #fed400;
-  border: 2px solid red;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
   border-radius: 5px;
-  box-shadow: 2px 3px 10px red;
+  box-shadow: 10px 10px 40px black;
 }
